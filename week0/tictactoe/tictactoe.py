@@ -27,7 +27,7 @@ def player(board):
 
     for row in board:
         for col in row:
-            if col 
+            col == 'X' 
     raise NotImplementedError
 
 
