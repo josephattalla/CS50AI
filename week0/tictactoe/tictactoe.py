@@ -146,6 +146,7 @@ def utility(board):
         else:
             return -1
     
+    # if no one won, return 0
 
 
 def minimax(board):
