@@ -22,9 +22,9 @@ class StackFrontier():
         if self.empty():
             raise Exception("empty frontier")
         else:
-        node = self.frontier[-1]
-        self.frontier = self.frontier[:-1]
-        return node
+            node = self.frontier[-1]
+            self.frontier = self.frontier[:-1]
+            return node
 
 
 class QueueFrontier(StackFrontier):
