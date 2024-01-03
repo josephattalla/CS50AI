@@ -105,7 +105,7 @@ def winner(board):
         # check columns for winner
         for col in row:
             column = []
-            
+            column.append()
     
 
 
