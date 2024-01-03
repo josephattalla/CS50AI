@@ -99,6 +99,7 @@ def shortest_path(source, target):
     frontier = QueueFrontier()
     frontier.add(start)
 
+    # empty explored set
     
 
 
