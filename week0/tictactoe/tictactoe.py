@@ -145,6 +145,7 @@ def utility(board):
             return 1
         else:
             return -1
+    
 
 
 def minimax(board):
