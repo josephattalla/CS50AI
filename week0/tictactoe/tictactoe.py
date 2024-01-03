@@ -157,14 +157,4 @@ def minimax(board):
     # get player
     user = player(board)
 
-    # get moves
-    moves = actions(board)
-
-    # variable to max/min depending on whose turn it is
-    if user == X:
-        v = -math.inf
-
-    # loop through moves
-    for move in moves:
-        new_board = result(board, move)
-        
+    # if player is X, call 
