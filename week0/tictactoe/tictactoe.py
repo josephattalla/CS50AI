@@ -155,4 +155,6 @@ def minimax(board):
     """
     
     # get player
-    user = player()
+    user = player(board)
+
+    
