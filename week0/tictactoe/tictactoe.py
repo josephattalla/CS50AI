@@ -106,6 +106,7 @@ def winner(board):
         column = []
         for col in row:
             column.append(col)
+        
     
 
 
