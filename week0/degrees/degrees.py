@@ -121,6 +121,7 @@ def shortest_path(source, target):
         # If node is the goal, we have solution
         for pair in node:
             if pair in goal:
+                
                 return pair
 
 
