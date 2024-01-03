@@ -173,7 +173,7 @@ def max_function(board):
         Returns the maximized action.
         """
         
-        # 
+        # setting
         n = -math.inf
         moves = actions(board)
         for move in moves:
