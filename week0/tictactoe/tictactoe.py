@@ -24,8 +24,9 @@ def player(board):
     If inital_state() (game has just started), then returns X.
     """
 
-    # 
-    if board == initial_state(): return X
+    # if the board is empty
+    if board == initial_state(): 
+        return X
 
     X_count = 0
     O_count = 0
