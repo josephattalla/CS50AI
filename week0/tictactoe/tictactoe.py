@@ -62,7 +62,9 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
     
-    new_board = board
+    new_board = board.deepcopy()
+
+    
 
 
 def winner(board):
