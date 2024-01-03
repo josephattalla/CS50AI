@@ -115,7 +115,7 @@ def winner(board):
     # check diagnols
     diag_1 = []
     for i in range(0, 3):
-        diag.a
+        diag.ad
 
     
 
