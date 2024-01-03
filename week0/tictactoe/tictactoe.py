@@ -78,7 +78,8 @@ def result(board, action):
     # make deepcopy of board
     new_board = board.deepcopy()
 
-    # get 
+    # get player whose turn it is
+    
 
 
 
