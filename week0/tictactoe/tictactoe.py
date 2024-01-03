@@ -96,14 +96,18 @@ def winner(board):
     Returns the winner of the game, if there is one.
     """
     
-    # check rows for winner
     for row in board:
+        # check rows for winner
         if row == [X, X, X]:
             return X
         elif row == [O, O, O]:
             return O
+        # check columns for winner
+        for col in row:
+            column = []
+            
     
-    
+
 
 
 def terminal(board):
