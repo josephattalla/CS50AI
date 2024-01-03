@@ -139,6 +139,7 @@ def terminal(board):
     if empty == 0:
         return True
 
+    return False
 
 
 
