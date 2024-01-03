@@ -103,6 +103,7 @@ def winner(board):
         elif row == [O, O, O]:
             return O
         # check columns for winner
+        column = []
         for col in row:
             column.append()
     
