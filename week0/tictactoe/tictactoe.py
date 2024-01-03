@@ -168,7 +168,7 @@ def minimax(board):
             n = max(n, n_new)
 
 
-def max_function(board, ):
+def max_function(board):
         n = -math.inf
         for move in actions(board):
             new_board = result(board, move)
