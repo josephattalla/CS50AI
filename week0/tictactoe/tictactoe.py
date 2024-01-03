@@ -160,9 +160,10 @@ def minimax(board):
     # get moves
     moves = actions(board)
 
-    # List to choose which move is best
-    choose_move = []
+    # variable to max/min depending on whose turn it is
+    if user == X:
+        v = -math.inf
 
     # loop through moves
     for move in moves:
-        choose_move.append()
+        
