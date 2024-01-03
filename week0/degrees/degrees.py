@@ -92,7 +92,7 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # inital state ad goal
+    # inital state
     state_0 = neighbors_for_person(source)
 
     # keep track of explored nodes (degrees)
