@@ -120,7 +120,7 @@ def winner(board):
         return X
     elif diag == [O, O, O]:
         return O
-    
+    diag = []
 
     
 
