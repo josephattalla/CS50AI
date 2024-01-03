@@ -111,6 +111,7 @@ def winner(board):
             return X
         elif column == [O, O, O]:
             return O
+        
 
     
 
