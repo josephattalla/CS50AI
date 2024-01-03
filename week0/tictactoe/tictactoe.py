@@ -136,7 +136,9 @@ def terminal(board):
                 empty += 1
     
     if empty == 0:
-        return 
+        return True
+
+    
 
 
 def utility(board):
