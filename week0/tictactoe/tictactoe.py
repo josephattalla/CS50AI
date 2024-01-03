@@ -102,7 +102,8 @@ def winner(board):
             return X
         elif row == [O, O, O]:
             return O
-        
+    
+    
 
 
 def terminal(board):
