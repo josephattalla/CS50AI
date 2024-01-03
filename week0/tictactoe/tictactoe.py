@@ -139,7 +139,7 @@ def utility(board):
     """
     
     # check who won
-    
+    user = 
 
 
 def minimax(board):
