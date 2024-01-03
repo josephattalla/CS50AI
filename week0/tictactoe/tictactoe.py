@@ -113,7 +113,7 @@ def winner(board):
             return O
     
     # check diagnols
-    diag_1 = [board[0][0]]
+    diag_1 = [board[0][0], board[1]]
 
     
 
