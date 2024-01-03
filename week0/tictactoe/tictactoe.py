@@ -134,6 +134,8 @@ def terminal(board):
         for col in row:
             if col == EMPTY:
                 empty += 1
+    
+    
 
 
 def utility(board):
