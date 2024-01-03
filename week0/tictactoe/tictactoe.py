@@ -113,9 +113,11 @@ def winner(board):
             return O
     
     # check diagnols
-    diag_1 = []
+    diag = []
     for i in range(0, 3):
-        diag_1.append(board[i][i])
+        diag.append(board[i][i])
+    if diag == [X, X, X]:
+        return X
     
 
     
