@@ -92,10 +92,6 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # if source and target are same, raise Exception
-    if source == target:
-        return ()
-
     # initialize starting node and frontier: state is the person_id, action is the movie_id
     start = Node(state=source, parent=None, action=None)
     frontier = QueueFrontier()
