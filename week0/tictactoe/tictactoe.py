@@ -95,42 +95,29 @@ def winner(board):
     """
     Returns the winner of the game, if there is one.
     """
-    
-    for row in board:
-        # check rows for winner
-        if row == [X, X, X]:
-            return X
-        elif row == [O, O, O]:
-            return O
-        
-        # check columns for winner
-        column = []
-        for col in row:
-            column.append(col)
-        if column == [X, X, X]:
-            return X
-        elif column == [O, O, O]:
-            return O
-    
-    # check diagnols
-    diag = []
-    for i in range(0, 3):
-        diag.append(board[i][i])
-    if diag == [X, X, X]:
-        return X
-    elif diag == [O, O, O]:
-        return O
-    diag = []
-    for i in range(2, -1, -1):
-        diag.append(board[i][i])
-    if diag == [X, X, X]:
-        return X
-    elif diag == [O, O, O]:
-        return O
-    
-    # if no winners, return None
-    return None
 
+    # Check rows and columns for a winner
+    for i in range(3):
+        # Check rows
+        if board[i] == [X, X, X]:
+            return X
+        elif board[i] == [O, O, O]:
+            return O
+
+        # Check columns
+        if board[0][i] == board[1][i] == board[2][i] == X:
+            return X
+        elif board[0][i] == board[1][i] == board[2][i] == O:
+            return O
+
+    # Check diagonals
+    if board[0][0] == board[1][1] == board[2][2] == X or board[0][2] == board[1][1] == board[2][0] == X:
+        return X
+    elif board[0][0] == board[1][1] == board[2][2] == O or board[0][2] == board[1][1] == board[2][0] == O:
+        return O
+
+    # If no winner, return None
+    return None
     
 
 def terminal(board):
