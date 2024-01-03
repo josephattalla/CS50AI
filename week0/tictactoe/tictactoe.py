@@ -135,7 +135,8 @@ def terminal(board):
             if col == EMPTY:
                 empty += 1
     
-    
+    if empty == 0:
+        return 
 
 
 def utility(board):
