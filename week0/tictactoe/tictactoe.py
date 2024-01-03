@@ -27,7 +27,8 @@ def player(board):
 
     for row in board:
         for col in row:
-            col == 'X' 
+            if col == 'X': X_count+=1
+            elif col == 'O': O_count
     raise NotImplementedError
 
 
