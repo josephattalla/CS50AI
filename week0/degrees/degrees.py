@@ -95,7 +95,7 @@ def shortest_path(source, target):
     num_explored = 0
 
     # initialize frontier
-    
+    start = Node()
 
 
 
