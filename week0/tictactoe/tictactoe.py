@@ -116,6 +116,7 @@ def winner(board):
     diag_1 = []
     for i in range(0, 3):
         diag_1.append(board[i][i])
+    
 
     
 
