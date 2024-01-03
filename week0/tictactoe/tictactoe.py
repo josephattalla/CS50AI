@@ -96,7 +96,10 @@ def winner(board):
     Returns the winner of the game, if there is one.
     """
     
-    # check 
+    # check rows for winner
+    for row in board:
+        if row == [X, X, X]:
+            
 
 
 def terminal(board):
