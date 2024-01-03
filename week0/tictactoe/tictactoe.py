@@ -62,7 +62,7 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
     
-    new
+    new_board = board
 
 
 def winner(board):
