@@ -121,7 +121,7 @@ def shortest_path(source, target):
                 path.reverse()
                 return path
 
-        # add neighbors to frontier
+        # add neighbors to frontier: actions are the movies, states are the pers
         for movie, person in neighbors_for_person(node.state):
             if not frontier.contains_state(person):
                 child = Node(state=person, parent=node, action=movie)
