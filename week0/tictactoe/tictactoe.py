@@ -21,6 +21,7 @@ def initial_state():
 def player(board):
     """
     Returns player who has the next turn on a board.
+    
     """
 
     if board == initial_state(): return X
