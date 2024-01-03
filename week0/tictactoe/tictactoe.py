@@ -140,8 +140,9 @@ def utility(board):
     
     # check who won
     user = winner(board)
-
-    
+    if user:
+        if user == X:
+            return 
 
 
 def minimax(board):
