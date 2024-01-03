@@ -91,8 +91,9 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
+    
+    num_explored = 0
 
-    num_
 
 
 def person_id_for_name(name):
