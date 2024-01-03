@@ -143,7 +143,8 @@ def utility(board):
     if user:
         if user == X:
             return 1
-        else
+        else:
+            return -1
 
 
 def minimax(board):
