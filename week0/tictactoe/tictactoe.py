@@ -165,4 +165,4 @@ def minimax(board):
 
     # loop through moves
     for move in moves:
-        choo
+        choose_move.append()
