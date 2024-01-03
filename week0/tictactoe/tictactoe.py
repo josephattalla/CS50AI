@@ -106,10 +106,11 @@ def winner(board):
         column = []
         for col in row:
             column.append(col)
-        
+        if column == [X, X, X]:
+            return X
+        elif column == [O, O, O]
+
     
-
-
 
 def terminal(board):
     """
