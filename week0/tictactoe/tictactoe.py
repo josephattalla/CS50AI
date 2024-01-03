@@ -22,6 +22,7 @@ def player(board):
     """
     Returns player who has the next turn on a board.
     """
+    X_count = 0
     
     raise NotImplementedError
 
