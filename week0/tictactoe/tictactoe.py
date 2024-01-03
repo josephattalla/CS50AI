@@ -154,4 +154,5 @@ def minimax(board):
     Returns the optimal action for the current player on the board.
     """
     
-    
+    # get player
+    user = player()
