@@ -92,7 +92,9 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    
+    # if source and target are same, raise Exception
+    if source == target:
+        ra
 
     # initialize starting node and frontier
     start = Node(state=state_0, parent=None, action=None)
