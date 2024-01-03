@@ -40,7 +40,7 @@ def player(board):
             elif col == O:
                 O_count+=1
     
-    # if X is more, return O
+    # if X is more, return O; else return X
     if X_count > O_count:
         return O
     else: 
