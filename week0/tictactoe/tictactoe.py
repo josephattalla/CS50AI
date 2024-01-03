@@ -174,7 +174,7 @@ def max_function(board):
         """
         
         # setting
-        n = -math.inf
+        v = -math.inf
         moves = actions(board)
         for move in moves:
             new_board = result(board, move)
