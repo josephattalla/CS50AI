@@ -106,7 +106,8 @@ def shortest_path(source, target):
     while True:
 
         # if nothing in frontier, no solution
-        if frontier.empty()
+        if frontier.empty():
+            return 
 
 
 
