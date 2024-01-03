@@ -124,9 +124,11 @@ def terminal(board):
     """
     Returns True if game is over, False otherwise.
     """
+    
     if winner(board):
         return True
     
+
 
 
 def utility(board):
