@@ -92,7 +92,7 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    
+    num_
 
 
 def person_id_for_name(name):
