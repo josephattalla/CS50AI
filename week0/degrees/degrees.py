@@ -95,7 +95,7 @@ def shortest_path(source, target):
 
     # initalize state and goal
     state_0 = neighbors_for_person(source)
-    goal = neighbors_for_person(target)
+    pairs 
 
     # if state in goal, return that pair
     for pair in state_0:
