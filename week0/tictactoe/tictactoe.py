@@ -46,7 +46,7 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    
+
     moves = set()
 
     for i, row in enumerate(board):
@@ -61,7 +61,8 @@ def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
-    raise NotImplementedError
+    
+    
 
 
 def winner(board):
