@@ -23,7 +23,11 @@ def player(board):
     Returns player who has the next turn on a board.
     """
     X_count = 0
-    
+    O_count = 0
+
+    for row in board:
+        for col in row:
+            if col 
     raise NotImplementedError
 
 
