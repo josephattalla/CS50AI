@@ -160,6 +160,6 @@ def minimax(board):
     # get moves
     moves = actions(board)
 
-    # 
+    # List of 
 
     # loop through moves
