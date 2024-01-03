@@ -170,7 +170,7 @@ def minimax(board):
 
 def max_function(board):
         """
-        Returns maximized 
+        Returns the maximized 
         """
         
         # 
