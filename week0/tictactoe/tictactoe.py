@@ -178,6 +178,6 @@ def max_function(board):
         moves = actions(board)
         for move in moves:
             new_board = result(board, move)
-            n_new = minimax(new_board)
+            v_new = minimax(new_board)
             n = max(n, n_new)
         return 
