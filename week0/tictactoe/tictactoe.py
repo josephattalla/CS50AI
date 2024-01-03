@@ -24,7 +24,7 @@ def player(board):
     """
 
     if board == initial_state(): return X
-    
+
     X_count = 0
     O_count = 0
 
@@ -33,7 +33,7 @@ def player(board):
             if col == X: X_count+=1
             elif col == O: O_count+=1
     
-    if X_count > O_count: return X
+    if X_count > O_count: return O
     else: return O
 
 
