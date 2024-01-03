@@ -129,6 +129,7 @@ def terminal(board):
     if winner(board):
         return True
     
+    
     empty = 0
     for row in board:
         for col in row:
@@ -138,7 +139,7 @@ def terminal(board):
     if empty == 0:
         return True
 
-    
+
 
 
 def utility(board):
