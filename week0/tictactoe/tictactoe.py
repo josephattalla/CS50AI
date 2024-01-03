@@ -112,6 +112,7 @@ def winner(board):
         elif column == [O, O, O]:
             return O
     
+    # check diagnols
     
 
     
