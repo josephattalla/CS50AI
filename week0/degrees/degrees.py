@@ -94,7 +94,6 @@ def shortest_path(source, target):
 
     # inital state and goal
     state_0 = neighbors_for_person(source)
-    goal = people[target]
 
     # keep track of explored nodes (degrees)
     num_explored = 0
