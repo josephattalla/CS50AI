@@ -113,7 +113,7 @@ def winner(board):
             return O
     
     # check diagnols
-    
+    diag
 
     
 
