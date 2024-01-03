@@ -18,9 +18,6 @@ class StackFrontier():
     def empty(self):
         return len(self.frontier) == 0
 
-
-    # Made by CS50, modified by Joseph Attalla to remove uneccesary else statement
-    # after the if: raise Exception
     def remove(self):
         if self.empty():
             raise Exception("empty frontier")
