@@ -53,8 +53,7 @@ def actions(board):
             if col == EMPTY:
                 moves.add((i, j))
     
-
-
+    return moves
 
 
 def result(board, action):
