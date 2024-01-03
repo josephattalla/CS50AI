@@ -130,16 +130,7 @@ def terminal(board):
         return True
     
     # if there is no more empty spots, return True
-    empty = 0
-    for row in board:
-        for col in row:
-            if col == EMPTY:
-                empty += 1
     
-    if empty == 0:
-        return True
-
-    return False
 
 
 
