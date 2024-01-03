@@ -32,6 +32,7 @@ def player(board):
     X_count = 0
     O_count = 0
 
+    # loop through the rows and columns in the board and add to X and O count
     for row in board:
         for col in row:
             if col == X:
