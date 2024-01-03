@@ -83,7 +83,7 @@ def result(board, action):
     user = player(board)
 
     # place user (player) in action (empty index on board)
-    new_board[action[0]] = user
+    new_board[action[0]][action[1]] = user
 
     # return new_board
     return new_board
