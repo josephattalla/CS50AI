@@ -128,7 +128,8 @@ def winner(board):
     elif diag == [O, O, O]:
         return O
     
-    
+    # if no winners, return None
+    return None
 
     
 
