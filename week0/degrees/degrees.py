@@ -102,7 +102,11 @@ def shortest_path(source, target):
     # empty explored set
     explored = set()
 
-    # 
+    # Keep looping until solution found
+    while True:
+
+        # if nothing in frontier, no solution
+        if frontier.empty()
 
 
 
