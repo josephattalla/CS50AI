@@ -113,6 +113,7 @@ def shortest_path(source, target):
         node = frontier.remove()
         num_explored += 1
 
+        # If node is the goal, we have solution
         
 
 
