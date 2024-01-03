@@ -175,7 +175,7 @@ def max_function(board):
         
         v = -math.inf
         moves = actions(board)
-        for move, i in (moves):
+        for move in enumerate(moves):
             new_board = result(board, move)
             v_new = minimax(new_board)
             v = max(v, v_new)
