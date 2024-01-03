@@ -108,7 +108,8 @@ def winner(board):
             column.append(col)
         if column == [X, X, X]:
             return X
-        elif column == [O, O, O]
+        elif column == [O, O, O]:
+            return O
 
     
 
