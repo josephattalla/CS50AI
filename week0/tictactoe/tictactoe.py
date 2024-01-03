@@ -162,4 +162,5 @@ def minimax(board):
         n = -math.inf
         for move in actions(board):
             new_board = result(board, move)
-            n_new = minimax()
+            n_new = minimax(new_board)
+            
