@@ -92,15 +92,7 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-
-    # initalize state and goal
-    state_0 = neighbors_for_person(source)
-    goal = neighbors_for_person(target)
-
-    # if state in goal, return that pair
-    for pair in state_0:
-        if pair in goal:
-            return pair
+    
 
     # initialize starting node and frontier
     start = Node(state=state_0, parent=None, action=None)
@@ -121,7 +113,7 @@ def shortest_path(source, target):
         # If node is the goal, we have solution
         for pair in node:
             if pair in goal:
-                
+
                 return pair
 
 
