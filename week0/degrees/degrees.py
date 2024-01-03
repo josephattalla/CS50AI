@@ -100,6 +100,8 @@ def shortest_path(source, target):
     frontier.add(start)
 
     # empty explored set
+    explored = set()
+
     
 
 
