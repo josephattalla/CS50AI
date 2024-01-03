@@ -121,7 +121,12 @@ def winner(board):
     elif diag == [O, O, O]:
         return O
     diag = []
-    
+    for i in range(3, 3):
+        diag.append(board[i][i])
+    if diag == [X, X, X]:
+        return X
+    elif diag == [O, O, O]:
+        return O
 
     
 
