@@ -162,4 +162,4 @@ def minimax(board):
 
     
 
-        # loop through moves
+    # loop through moves
