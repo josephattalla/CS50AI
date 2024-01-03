@@ -94,7 +94,7 @@ def shortest_path(source, target):
 
     # if source and target are same, raise Exception
     if source == target:
-        raise Exception('Looking for same person')
+        
 
     # initialize starting node and frontier: state is the person_id, action is the movie_id
     start = Node(state=source, parent=None, action=None)
