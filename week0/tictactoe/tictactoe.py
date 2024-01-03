@@ -28,6 +28,7 @@ def player(board):
     if board == initial_state(): 
         return X
 
+    # initialize counts for X and O
     X_count = 0
     O_count = 0
 
