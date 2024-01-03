@@ -170,6 +170,7 @@ def minimax(board):
 
 def max_function(board):
         
+        
         # 
         n = -math.inf
         moves = actions(board)
