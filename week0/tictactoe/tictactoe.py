@@ -99,7 +99,10 @@ def winner(board):
     # check rows for winner
     for row in board:
         if row == [X, X, X]:
-            
+            return X
+        elif row == [O, O, O]:
+            return O
+        
 
 
 def terminal(board):
