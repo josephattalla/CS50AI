@@ -140,6 +140,7 @@ def utility(board):
     
     # check who won
     user = winner(board)
+
     
 
 
