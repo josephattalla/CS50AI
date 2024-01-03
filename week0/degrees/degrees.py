@@ -97,7 +97,7 @@ def shortest_path(source, target):
         raise Exception('Looking for same person')
 
     # initialize starting node and frontier
-    start = Node(state=state_0, parent=None, action=None)
+    start = Node(state=source, parent=None, action=None)
     frontier = QueueFrontier()
     frontier.add(start)
 
