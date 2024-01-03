@@ -74,6 +74,8 @@ def result(board, action):
     # if the action is placing a move on a spot that is not empty, raise Excpetion
     if board[action] != EMPTY:
         raise Exception('Invalid Move!')
+    
+    
     new_board = board.deepcopy()
 
 
