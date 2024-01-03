@@ -56,7 +56,7 @@ def actions(board):
     moves = set()
 
     # loop through rows and columns using enumerate to keep track of the index,
-    # 
+    # if the 
     for i, row in enumerate(board):
         for j, col in enumerate(row):
             if col == EMPTY:
