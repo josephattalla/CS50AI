@@ -157,6 +157,7 @@ def minimax(board):
     # get player
     user = player(board)
 
+    # get moves
     moves = actions(board)
-    
+
         
