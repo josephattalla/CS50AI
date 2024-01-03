@@ -92,7 +92,7 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
     # keep track of explored nodes
-    degrees = 0
+    num_explored = 0
 
     
 
