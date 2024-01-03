@@ -129,7 +129,7 @@ def terminal(board):
     if winner(board):
         return True
     
-    # if all spots are 
+    # if all spots are not empty, return True, else return False
     return all(col != EMPTY for row in board for col in row)
 
 
