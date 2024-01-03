@@ -121,6 +121,7 @@ def winner(board):
     elif diag == [O, O, O]:
         return O
     diag = []
+    
 
     
 
