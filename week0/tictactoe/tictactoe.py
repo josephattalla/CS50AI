@@ -30,7 +30,7 @@ def player(board):
             if col == 'X': X_count+=1
             elif col == 'O': O_count+=1
     
-    if X_count > O_count: return 
+    if X_count > O_count: return X
 
 
 def actions(board):
