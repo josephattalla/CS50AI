@@ -124,6 +124,7 @@ def shortest_path(source, target):
         for movie, person in neighbors_for_person(node.state):
             if not frontier.contains_state(person):
                 child = Node(state=person, parent=node, action=movie)
+                frontier.add(child)
                 
 
 
