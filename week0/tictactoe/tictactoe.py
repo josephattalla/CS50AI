@@ -57,7 +57,7 @@ def actions(board):
     return moves
 
 
-def result(board, action):
+def result(board: list(), action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
