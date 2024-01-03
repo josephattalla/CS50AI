@@ -113,8 +113,8 @@ def shortest_path(source, target):
         node = frontier.remove()
 
         # If node is the target, we have solution
-        for pair in node:
-            if pair[1] == target:
+        if node.state == target:
+                path = []
                 
                 return pair
 
