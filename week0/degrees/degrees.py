@@ -83,10 +83,6 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-
-
-
-
 def shortest_path(source, target):
     """
     Returns the shortest list of (movie_id, person_id) pairs
@@ -95,19 +91,21 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # inital state
-    state_0 = neighbors_for_person(source)
 
-    # keep track of explored nodes (degrees)
-    num_explored = 0
+    # initalize state and goal
+    state_0 = neighbors_for_person(source)
+    goal = neighbors_for_person(target)
+
+    # if state in goal, return that pair
+    for pair in state_0:
+        if pair in goal:
+            return pair
 
     # initialize starting node and frontier
     start = Node(state=state_0, parent=None, action=None)
     frontier = QueueFrontier()
     frontier.add(start)
 
-    # empty explored set
-    explored = set()
 
     # Keep looping until solution found
     while True:
@@ -118,7 +116,6 @@ def shortest_path(source, target):
 
         # choose node from frontier
         node = frontier.remove()
-        num_explored += 1
 
         # If node is the goal, we have solution
 
