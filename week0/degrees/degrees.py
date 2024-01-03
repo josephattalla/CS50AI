@@ -124,7 +124,7 @@ def shortest_path(source, target):
                 path.reverse()
                 return path
         
-        # add actore to explored set
+        # add actor to explored set
         explored.add(node.state)
 
         # add neighbors to frontier: actions are the movie_id, states are the person_id
