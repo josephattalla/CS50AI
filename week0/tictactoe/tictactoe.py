@@ -28,9 +28,10 @@ def player(board):
     for row in board:
         for col in row:
             if col == X: X_count+=1
-            elif col == 'O': O_count+=1
+            elif col == O: O_count+=1
     
     if X_count > O_count: return X
+    else: return O
 
 
 def actions(board):
