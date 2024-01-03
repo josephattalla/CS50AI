@@ -161,4 +161,4 @@ def minimax(board):
     if user == X:
         n = -math.inf
         for move in actions(board):
-            eval
+            n_
