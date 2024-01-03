@@ -101,6 +101,9 @@ def shortest_path(source, target):
     frontier = QueueFrontier()
     frontier.add(start)
 
+    # explored set of actors
+    explored = set()
+
 
     # Keep looping until solution found
     while True:
