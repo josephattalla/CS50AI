@@ -138,7 +138,7 @@ def utility(board):
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
     """
     
-    # check who won
+    # check who won and return their respective number
     user = winner(board)
     if user:
         if user == X:
@@ -147,7 +147,7 @@ def utility(board):
             return -1
     
     # if no one won, return 0
-
+    
 
 def minimax(board):
     """
