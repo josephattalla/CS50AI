@@ -29,7 +29,8 @@ class StackFrontier():
         self.frontier = self.frontier[:-1]
         return node
 
-
+    # Made by CS50, modified by Joseph Attalla to remove uneccesary else statement
+    # after the if: raise Exception
 class QueueFrontier(StackFrontier):
 
     def remove(self):
