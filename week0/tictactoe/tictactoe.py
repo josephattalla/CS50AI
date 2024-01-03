@@ -29,7 +29,8 @@ def player(board):
         for col in row:
             if col == 'X': X_count+=1
             elif col == 'O': O_count+=1
-    raise NotImplementedError
+    
+    
 
 
 def actions(board):
