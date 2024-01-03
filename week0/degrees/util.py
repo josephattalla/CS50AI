@@ -18,6 +18,7 @@ class StackFrontier():
     def empty(self):
         return len(self.frontier) == 0
 
+    
     def remove(self):
         if self.empty():
             raise Exception("empty frontier")
