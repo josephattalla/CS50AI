@@ -138,7 +138,7 @@ def utility(board):
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
     """
     
-    # check
+    # check who won
 
 
 def minimax(board):
