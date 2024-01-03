@@ -45,7 +45,7 @@ def actions(board):
     moves = set()
 
     for i, row in enumerate(board):
-        for j, col in row:
+        for j, col in enumerate(row):
             if col == X: X_count+=1
             elif col == O: O_count+=1
 
