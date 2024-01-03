@@ -94,7 +94,7 @@ def shortest_path(source, target):
 
     # if source and target are same, raise Exception
     if source == target:
-        raise Exception('Looking for ')
+        raise Exception('Looking for same person')
 
     # initialize starting node and frontier
     start = Node(state=state_0, parent=None, action=None)
