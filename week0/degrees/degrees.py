@@ -93,7 +93,7 @@ def shortest_path(source, target):
     """
 
     # inital state and goal
-    state_0 = people[source]
+    state_0 = people[source].
     goal = people[target]
 
     # keep track of explored nodes (degrees)
@@ -119,7 +119,7 @@ def shortest_path(source, target):
         num_explored += 1
 
         # If node is the goal, we have solution
-        
+
 
 
 
