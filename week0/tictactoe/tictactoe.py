@@ -31,11 +31,15 @@ def player(board):
 
     for row in board:
         for col in row:
-            if col == X: X_count+=1
-            elif col == O: O_count+=1
+            if col == X:
+                X_count+=1
+            elif col == O:
+                O_count+=1
     
-    if X_count > O_count: return O
-    else: return X
+    if X_count > O_count:
+        return O
+    else: 
+        return X
 
 
 def actions(board):
@@ -46,10 +50,10 @@ def actions(board):
 
     for i, row in enumerate(board):
         for j, col in enumerate(row):
-            if col == X: X_count+=1
-            elif col == O: O_count+=1
+            if col == EMPTY:
+                moves.add(())
 
-    raise NotImplementedError
+
 
 
 def result(board, action):
