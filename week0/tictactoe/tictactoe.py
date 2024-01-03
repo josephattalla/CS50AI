@@ -174,4 +174,4 @@ def max_function(board):
             new_board = result(board, move)
             n_new = minimax(new_board)
             n = max(n, n_new)
-        
+        return 
