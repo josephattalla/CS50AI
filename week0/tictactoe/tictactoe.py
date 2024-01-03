@@ -44,7 +44,7 @@ def actions(board):
     """
     moves = set()
 
-    for row in board:
+    for i, row in board:
         for col in row:
             if col == X: X_count+=1
             elif col == O: O_count+=1
