@@ -81,7 +81,7 @@ def result(board, action):
     # get whose turn it is
     user = player(board)
 
-    # place 
+    # place user
     new_board
 
 
