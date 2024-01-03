@@ -61,7 +61,8 @@ def actions(board):
         for j, col in enumerate(row):
             if col == EMPTY:
                 moves.add((i, j))
-     
+
+    # return moves 
     return moves
 
 
