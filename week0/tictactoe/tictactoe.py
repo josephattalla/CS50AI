@@ -52,9 +52,10 @@ def actions(board):
     Returns set of all possible actions (i, j) available on the board.
     """
 
-    # create set of 
+    # create set of moves
     moves = set()
 
+    
     for i, row in enumerate(board):
         for j, col in enumerate(row):
             if col == EMPTY:
