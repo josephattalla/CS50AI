@@ -115,6 +115,8 @@ def shortest_path(source, target):
         # If node is the target, we have solution
         if node.state == target:
                 path = []
+                while node.parent is not None:
+                    
                 
                 return pair
 
