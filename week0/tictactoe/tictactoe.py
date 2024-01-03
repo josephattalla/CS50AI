@@ -77,7 +77,7 @@ def result(board, action):
         raise Exception('Invalid Move!')
     
     # make deepcopy of board
-    new_board = deepcopy()
+    new_board = deepcopy(board)
 
     # get whose turn it is
     user = player(board)
