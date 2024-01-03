@@ -118,6 +118,8 @@ def winner(board):
         diag.append(board[i][i])
     if diag == [X, X, X]:
         return X
+    elif diag == [O, O, O]:
+        return O
     
 
     
