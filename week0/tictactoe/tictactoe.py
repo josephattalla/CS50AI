@@ -157,4 +157,4 @@ def minimax(board):
     # get player
     user = player(board)
 
-    # if player is X, call 
+    # if player is X, call max_function
