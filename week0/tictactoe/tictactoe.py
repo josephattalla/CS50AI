@@ -133,7 +133,6 @@ def terminal(board):
     return all(col != EMPTY for row in board for col in row)
 
 
-
 def utility(board):
     """
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
