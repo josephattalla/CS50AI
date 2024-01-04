@@ -72,7 +72,7 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
 
-    # if the action is placing a move on a spot that is not empty, raise Excpetion
+    # if the action is placing a move on a spot that is not empty or not in , raise Excpetion
     if board[action[0]][action[1]] != EMPTY:
         raise Exception('Invalid Move!')
     if action[0] > 2 or action[0] < 0 or action[1] > 2 or action[1] < 0:
