@@ -206,7 +206,7 @@ def min_function(board):
         return None, utility(board)
     
     # set starting value to maximize against and empty best action
-    v = -math.inf
+    v = math.inf
     best_action = None
 
     # loop through the possible actions
