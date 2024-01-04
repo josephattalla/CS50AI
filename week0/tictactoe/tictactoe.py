@@ -201,6 +201,28 @@ def min_function(board):
     Returns the minimized action and utility value for current player.
     """
 
+    # if game is over, return None for action and the utility
     if terminal(board):
         return None, utility(board)
+    
+    # set starting value to maximize against and empty best action
+    v = -math.inf
+    best_action = None
+
+    # loop through the possible actions
+    moves = actions(board)
+    for move in moves:
+
+        # create new board based on current move
+        new_board = result(board, move)
+        # get value of optimal move of other player using min_function
+        _, value = min_function(new_board)
+        
+        # if value is greater than v, set v = value and best_action = move
+        if value > v:
+            v = value
+            best_action = move
+    
+    # return the best_action and value of best_action (the value is used for the min_function)
+    return best_action, v
     
