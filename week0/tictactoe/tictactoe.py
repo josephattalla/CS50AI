@@ -181,8 +181,9 @@ def max_function(board):
         moves = actions(board)
         for move in moves:
 
-            # 
+            # create new board based on current move
             new_board = result(board, move)
+            
             _, value = min_function(new_board)
             
             if value > v:
