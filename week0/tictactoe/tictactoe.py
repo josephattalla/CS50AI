@@ -175,6 +175,8 @@ def max_function(board):
         
         # set starting value to maximize against
         v = -math.inf
+
+        
         moves = actions(board)
         for i, move in enumerate(moves):
             new_board = result(board, move)
