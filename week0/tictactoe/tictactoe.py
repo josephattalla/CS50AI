@@ -176,11 +176,11 @@ def max_function(board):
         if terminal(board):
             return None, utility(board)
         
-        
+
         v = -math.inf
         moves = actions(board)
         for i, move in enumerate(moves):
             new_board = result(board, move)
-            v_new = minimax(new_board)
+            _, value = minimax(new_board)
             v = max(v, v_new)
         return 
