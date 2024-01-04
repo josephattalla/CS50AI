@@ -76,6 +76,7 @@ def result(board, action):
     if board[action[0]][action[1]] != EMPTY:
         raise Exception('Invalid Move!')
     
+    
     # make deepcopy of board
     new_board = deepcopy(board)
 
