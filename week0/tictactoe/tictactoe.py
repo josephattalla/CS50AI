@@ -181,6 +181,6 @@ def max_function(board):
         moves = actions(board)
         for i, move in enumerate(moves):
             new_board = result(board, move)
-            _, value = minimax(new_board)
+            _, value = min_value(new_board)
             v = max(v, v_new)
         return 
