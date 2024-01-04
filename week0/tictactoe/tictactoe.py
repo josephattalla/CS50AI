@@ -164,7 +164,7 @@ def minimax(board):
         return min_function(board)[0]
 
 
-def max_function(board, a):
+def max_function(board, a, b):
         """
         Returns the maximized action and utility value for the current player.
         """
