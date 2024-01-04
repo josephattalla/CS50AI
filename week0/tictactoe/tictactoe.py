@@ -184,4 +184,4 @@ def max_function(board):
             _, value = min_value(new_board)
             
             if value > v:
-                return value, move
+                return move, value
