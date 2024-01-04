@@ -170,7 +170,7 @@ def minimax(board):
 
 def max_function(board):
         """
-        Returns the maximized action.
+        Returns the maximized action and utility value for the current player.
         """
         
         if terminal(board):
