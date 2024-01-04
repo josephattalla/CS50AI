@@ -161,7 +161,7 @@ def minimax(board):
     if user == X:
         return max_function(board)[1]
     else:
-        return min
+        return min_function
 
 
 def max_function(board):
