@@ -173,6 +173,7 @@ def max_function(board):
         if terminal(board):
             return None, utility(board)
         
+        # set 
         v = -math.inf
         moves = actions(board)
         for i, move in enumerate(moves):
