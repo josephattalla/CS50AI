@@ -185,4 +185,5 @@ def max_function(board):
             
             if value > v:
                 v = value
+                
         return 
