@@ -227,6 +227,8 @@ def min_function(board, alpha, beta):
         if value < v:
             v = value
             best_action = move
+
+        
     
     # return the best_action and value of best_action (the value is used for the max_function)
     return best_action, v
