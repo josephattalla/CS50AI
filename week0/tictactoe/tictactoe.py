@@ -188,4 +188,5 @@ def min_function(board):
     Returns the minimized action and utility value for current player.
     """
 
-    
+    if terminal(board):
+        
