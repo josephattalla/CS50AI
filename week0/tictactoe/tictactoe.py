@@ -169,7 +169,7 @@ def max_function(board):
         Returns the maximized action and utility value for the current player.
         """
         
-        # if game is over
+        # if game is over, return None for action and the utility
         if terminal(board):
             return None, utility(board)
         
