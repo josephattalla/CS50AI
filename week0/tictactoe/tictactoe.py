@@ -189,4 +189,4 @@ def min_function(board):
     """
 
     if terminal(board):
-        
+        return None
