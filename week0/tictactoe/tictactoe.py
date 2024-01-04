@@ -181,3 +181,5 @@ def max_function(board):
             
             if value > v:
                 return move, value
+            
+
