@@ -180,6 +180,8 @@ def max_function(board):
         # loop through the possible actions
         moves = actions(board)
         for move in moves:
+
+            # 
             new_board = result(board, move)
             _, value = min_function(new_board)
             
