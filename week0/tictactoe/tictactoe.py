@@ -186,6 +186,7 @@ def max_function(board):
             if value > v:
                 v = value
                 best_action = move
+        
 
             
 
