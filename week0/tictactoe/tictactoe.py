@@ -184,7 +184,7 @@ def max_function(board, alpha, beta):
             # create new board based on current move
             new_board = result(board, move)
             # get value of optimal move of other player using min_function
-            _, value = min_function(new_board)
+            _, value = min_function(new_board, alpha, beta)
             
             # if value is greater than v, set v = value and best_action = move
             if value > v:
