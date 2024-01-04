@@ -219,7 +219,7 @@ def min_function(board):
         _, value = max_function(new_board)
         
         # if value is greater than v, set v = value and best_action = move
-        if value > v:
+        if value < v:
             v = value
             best_action = move
     
