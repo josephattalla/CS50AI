@@ -173,7 +173,7 @@ def max_function(board):
         if terminal(board):
             return None, utility(board)
         
-        # set starting value to maximize against
+        # set starting value to maximize against and best action
         v = -math.inf
 
         # loop through the possible actions
@@ -184,7 +184,7 @@ def max_function(board):
             
             if value > v:
                 v = value
-                
+
             
 
 def min_function(board):
