@@ -178,7 +178,7 @@ def max_function(board):
 
         # loop through the possible actions
         moves = actions(board)
-        for i, move in enumerate(moves):
+        for move in moves:
             new_board = result(board, move)
             _, value = min_value(new_board)
             
