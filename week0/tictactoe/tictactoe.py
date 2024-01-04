@@ -183,3 +183,7 @@ def max_function(board):
                 return move, value
             
 
+def min_function(board):
+    """
+    
+    """
