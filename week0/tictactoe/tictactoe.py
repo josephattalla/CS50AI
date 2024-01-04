@@ -183,7 +183,7 @@ def max_function(board):
             _, value = min_function(new_board)
             
             if value > v:
-                return move, value
+                v = 
             
 
 def min_function(board):
