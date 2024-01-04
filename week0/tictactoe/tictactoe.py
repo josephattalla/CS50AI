@@ -228,7 +228,7 @@ def min_function(board, alpha, beta):
             v = value
             best_action = move
 
-        
+        # alpha-beta pruning
     
     # return the best_action and value of best_action (the value is used for the max_function)
     return best_action, v
