@@ -196,7 +196,7 @@ def max_function(board, alpha, beta):
 
             
 
-def min_function(board):
+def min_function(board, alpha, beta):
     """
     Returns the minimized action and utility value for current player.
     """
