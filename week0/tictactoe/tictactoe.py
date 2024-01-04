@@ -191,7 +191,7 @@ def max_function(board):
                 v = value
                 best_action = move
         
-        # return the best_action and value of best_action (the value is used for the )
+        # return the best_action and value of best_action (the value is used for the min_function)
         return best_action, v
 
             
