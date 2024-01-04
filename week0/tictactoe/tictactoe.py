@@ -214,7 +214,7 @@ def min_function(board):
     for move in moves:
 
         # create new board based on current move
-        new_board = result(board, move)
+        new_board = result(board, move[0])
         # get value of optimal move of other player using max_function
         _, value = max_function(new_board)
         
