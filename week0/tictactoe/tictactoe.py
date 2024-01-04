@@ -175,6 +175,7 @@ def max_function(board):
         
         # set starting value to maximize against and empty best action
         v = -math.inf
+        best_action = 
 
         # loop through the possible actions
         moves = actions(board)
