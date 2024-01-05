@@ -14,7 +14,7 @@ CKnave = Symbol("C is a Knave")
 knowledge0 = And(Or(AKnave, AKnight),
                  Biconditional(AKnight, AKnave),
                  Implication(AKnave, Not(AKnave)),
-                 Implication(A))
+                 Implication(AKnight, AKnight))
 
 # Puzzle 1
 # A says "We are both knaves."
