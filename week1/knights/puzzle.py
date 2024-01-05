@@ -34,10 +34,7 @@ knowledge2 = And(Or(And(AKnave, BKnight), And(BKnave, AKnight)),
 # B says "A said 'I am a knave'."
 # B says "C is a knave."
 # C says "A is a knight."
-knowledge3 = And(Or(AKnight, AKnave),
-                 AKnave,
-                 CKnave,
-                 AKnight)
+knowledge3 = And()
 
 
 def main():
