@@ -20,7 +20,7 @@ knowledge0 = And(Not(And(AKnave, AKnight)),
 # B says nothing.
 knowledge1 = And(Or(And(AKnave, BKnight), And(BKnave, AKnight)),
                  Implication(AKnight, And(AKnight, BKnight)),
-                 Implication)
+                 Implication(AKnave))
 
 # Puzzle 2
 # A says "We are the same kind."
