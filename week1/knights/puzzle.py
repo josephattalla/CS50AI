@@ -33,8 +33,7 @@ knowledge2 = And(Not(And(AKnave, AKnight)),
                  Not(And(BKnave, BKnight)),
                  Or(BKnight, BKnave),
                  Implication(AKnave, Not(And(AKnave, BKnave))),
-                 Implication(BKnave, Not(And(BKnave, AKnight))),
-                 Implication)
+                 Implication(BKnave, Not(And(BKnave, AKnight))))
 
 # Puzzle 3
 # A says either "I am a knight." or "I am a knave.", but you don't know which.
