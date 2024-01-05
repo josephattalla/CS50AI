@@ -16,7 +16,7 @@ knowledge0 = And(AKnight, AKnave)
 # Puzzle 1
 # A says "We are both knaves."
 # B says nothing.
-knowledge1 = And()
+knowledge1 = And(Implication())
 
 # Puzzle 2
 # A says "We are the same kind."
