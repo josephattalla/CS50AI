@@ -49,7 +49,7 @@ knowledge3 = And(Not(And(AKnave, AKnight)),
                  Or(CKnight, CKnave),
                  Implication(AKnave, Not(Or(AKnave, AKnight))),
                  Implication(BKnight, AKnave),
-                 Implication(C))
+                 Implication(CKnave, Not()))
 
 
 def main():
