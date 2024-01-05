@@ -26,7 +26,7 @@ knowledge1 = And(Implication(AKnave, BKnave))
 # B says "We are of different kinds."
 knowledge2 = And(Or(And(AKnave, BKnight), And(BKnave, AKnight)),
                  Implication(AKnave, Not(And(AKnave, BKnave))),
-                 Implication(BKnave, Not(And(BKna, BKnave))))
+                 Implication(BKnave, Not(And(BKnave, BKnave))))
 
 # Puzzle 3
 # A says either "I am a knight." or "I am a knave.", but you don't know which.
