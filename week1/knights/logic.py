@@ -1,4 +1,4 @@
-import itertools
+ode import itertools
 
 
 class Sentence():
