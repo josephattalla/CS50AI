@@ -33,8 +33,8 @@ knowledge2 = And(Biconditional(AKnave, BKnave),
 # C says "A is a knight."
 knowledge3 = And(Or(AKnight, AKnave),
                  AKnave,
-                CKnave,
-                AKnight)
+                 CKnave,
+                 AKnight)
 
 
 def main():
