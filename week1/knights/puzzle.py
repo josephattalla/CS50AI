@@ -18,7 +18,8 @@ knowledge0 = And(Not(And(AKnave, AKnight)),
 # Puzzle 1
 # A says "We are both knaves."
 # B says nothing.
-knowledge1 = And(Or(And(AKnave, BKnight), And(BKnave, AKnight)),
+knowledge1 = And(Not(And(AKnave, AKnight)),
+                 Or(AKnight, AKnave),
                  Implication(AKnight, And(AKnave, BKnave)),
                  Implication(AKnave, Not(And(AKnave, BKnave))))
 
