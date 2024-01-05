@@ -45,7 +45,7 @@ knowledge3 = And(Not(And(AKnave, AKnight)),
                  Or(AKnight, AKnave),
                  Not(And(BKnave, BKnight)),
                  Or(BKnight, BKnave),
-                 Not(And(CKnave, CKnaveKnight)),
+                 Not(And(CKnave, CKnight)),
                  Or(BKnight, BKnave),)
 
 
