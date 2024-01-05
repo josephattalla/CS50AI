@@ -41,7 +41,11 @@ knowledge2 = And(Not(And(AKnave, AKnight)),
 # B says "A said 'I am a knave'."
 # B says "C is a knave."
 # C says "A is a knight."
-knowledge3 = And()
+knowledge3 = And(Not(And(AKnave, AKnight)),
+                 Or(AKnight, AKnave),
+                 Not(And(BKnave, BKnight)),
+                 Or(BKnight, BKnave),
+                 )
 
 
 def main():
