@@ -10,7 +10,8 @@ CKnight = Symbol("C is a Knight")
 CKnave = Symbol("C is a Knave")
 
 # Logic of game
-logic = And(Biconditional(AKnight, AKnave))
+logic = And(Biconditional(AKnight, AKnave),
+            )
 
 # Puzzle 0
 # A says "I am both a knight and a knave."
