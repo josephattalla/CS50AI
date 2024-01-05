@@ -20,7 +20,7 @@ knowledge0 = And(Not(And(AKnave, AKnight)),
 # B says nothing.
 knowledge1 = And(Not(And(AKnave, AKnight)),
                  Or(AKnight, AKnave),
-                 Not(And(AKnave, AKnight)),
+                 Not(And(BKnave, AKnight)),
                  Or(AKnight, AKnave),
                  Implication(AKnight, And(AKnave, BKnave)),
                  Implication(AKnave, Not(And(AKnave, BKnave))))
