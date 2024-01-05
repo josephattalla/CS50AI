@@ -16,7 +16,7 @@ logic = And(Biconditional(AKnight, AKnave),
 
 # Puzzle 0
 # A says "I am both a knight and a knave."
-knowledge0 = And(Implication(And(AKnight, AKnave)),
+knowledge0 = And(Implication(AAnd(AKnight, AKnave)),
                  logic)
 
 # Puzzle 1
