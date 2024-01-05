@@ -21,7 +21,7 @@ knowledge1 = And(Implication(AKnave, BKnave))
 # Puzzle 2
 # A says "We are the same kind."
 # B says "We are of different kinds."
-knowledge2 = And()
+knowledge2 = And(Biconditional())
 
 # Puzzle 3
 # A says either "I am a knight." or "I am a knave.", but you don't know which.
