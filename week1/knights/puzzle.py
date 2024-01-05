@@ -24,7 +24,7 @@ knowledge1 = And(Implication(AKnave, BKnave))
 knowledge2 = And(Biconditional(AKnave, BKnave),
                  Biconditional(AKnight, BKnight),
                  Biconditional(AKnave, BKnight),
-                 Biconditional(A))
+                 Biconditional(A, BKnave))
 
 # Puzzle 3
 # A says either "I am a knight." or "I am a knave.", but you don't know which.
