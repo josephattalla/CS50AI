@@ -220,9 +220,11 @@ class MinesweeperAI():
         # loop over the columns, rows of the cells next to current cell
         for i in range(cell[0]-1, cell[0]+2):
             for j in range(cell[1]-1, cell[1]+2):
+                
+                # if cell 
                 if (i, j) == cell:
                     continue
-                
+
 
         # 4) mark any additional cells as safe or as mines
         #    if it can be concluded based on the AI's knowledge base
