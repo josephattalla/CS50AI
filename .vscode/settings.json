@@ -1,4 +1,4 @@
 {
-    "gitdoc.enabled": true,
+    "gitdoc.enabled": false,
     "python.analysis.typeCheckingMode": "off"
 }
