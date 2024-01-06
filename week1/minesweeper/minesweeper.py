@@ -220,8 +220,8 @@ class MinesweeperAI():
         # loop over the columns, rows of the cells next to current cell
         for i in range(cell[0]-1, cell[0]+2):
             for j in range(cell[1]-1, cell[1]+2):
-                
-                # if cell 
+
+                # if cell is the same
                 if (i, j) == cell:
                     continue
 
