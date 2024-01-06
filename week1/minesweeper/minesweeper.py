@@ -213,7 +213,7 @@ class MinesweeperAI():
         # 3)  add a new sentence to the AI's knowledge base 
         #     based on the value of `cell` and `count`
         
-        # new count of
+        # new count of 
 
         # 4) mark any additional cells as safe or as mines
         #    if it can be concluded based on the AI's knowledge base
@@ -225,7 +225,7 @@ class MinesweeperAI():
         Returns a safe cell to choose on the Minesweeper board.
         The move must be known to be safe, and not already a move
         that has been made.
-        
+
         This function may use the knowledge in self.mines, self.safes
         and self.moves_made, but should not modify any of those values.
         """
