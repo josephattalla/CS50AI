@@ -214,7 +214,8 @@ class MinesweeperAI():
         #     based on the value of `cell` and `count`
         
         # count of new mines and undetermined cells
-        new
+        new_mines = 0
+        
 
         # 4) mark any additional cells as safe or as mines
         #    if it can be concluded based on the AI's knowledge base
