@@ -205,7 +205,7 @@ class MinesweeperAI():
         self.mark_safe(cell)
 
         # set for the undetermined cells and new count to track mines
-        undetermined = []
+        undetermined = set()
         new_count = 0
         # loop through rows and columns around cell
         for i in range(cell[0]-1, cell[0]+2):
@@ -217,29 +217,36 @@ class MinesweeperAI():
                         new_count += 1
                     # if not known mine or known safe, add to undetermined set
                     elif (i,j) not in self.safes and (i,j) not in self.moves_made:
-                        undetermined.append((i,j))
+                        undetermined.add((i,j))
         # add new sentence to KB with count and undetermined cells
         new_sentence = Sentence(undetermined, count-new_count)
         self.knowledge.append(new_sentence)
-
-        # loop through KB
-        for sentence in self.knowledge:
-            # update known mines and safes
-            if sentence.known_mines():
-                for c in sentence.known_mines().copy():
-                    self.mark_mine(c)
-            if sentence.known_safes():
-                for c in sentence.known_safes().copy():
-                    self.mark_safe(c)
-            
-        # loop through KB
-        for sentence in self.knowledge:
-            # if new sentence is subset of sentence, and they're not the same
-            # and the count of both is greater than 0
-            if new_sentence.cells.issubset(sentence.cells) and new_sentence != sentence and new_sentence.count > 0 and sentence.count > 0:
-                # add new sentence to KB using set2 - set1 = count2 - count1
-                subset = sentence.cells.difference(new_sentence.cells)
-                self.knowledge.append(Sentence(list(subset), sentence.count-new_sentence.count))
+        
+        # keep looping while knowledge is changing, to keep making new inferences off of added info
+        while True:
+            knowledge_change = False
+            # loop through KB
+            for sentence in self.knowledge:
+                # update known mines and safes
+                if sentence.known_mines():
+                    for mine in sentence.known_mines().copy():
+                        self.mark_mine(mine)
+                        knowledge_change = True
+                if sentence.known_safes():
+                    for safe in sentence.known_safes().copy():
+                        self.mark_safe(safe)
+                        knowledge_change = True
+                # if new sentence is subset of sentence, and they're not the same
+                # and the count of both is greater than 0
+                if new_sentence.cells.issubset(sentence.cells) and new_sentence != sentence and new_sentence.count > 0 and sentence.count > 0:
+                    # add new sentence to KB using set2 - set1 = count2 - count1
+                    subset = sentence.cells - new_sentence.cells
+                    new_sentence = Sentence(subset, sentence.count-new_sentence.count)
+                    if new_sentence not in self.knowledge:
+                        self.knowledge.append(new_sentence)
+                        knowledge_change = True
+            if not knowledge_change:
+                break
 
 
     def make_safe_move(self):
