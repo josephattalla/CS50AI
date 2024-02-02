@@ -19,7 +19,7 @@ def main():
     # the html file as the key and value is the 
     # list of all other html files that link to that page
     corpus = crawl(sys.argv[1])
-    '''
+
     # uses sample_pagerank algorithm, later defined, 
     # to get the estimated rank values from algorithm
     ranks = sample_pagerank(corpus, DAMPING, SAMPLES)
@@ -36,9 +36,8 @@ def main():
     print(f"PageRank Results from Iteration")
     for page in sorted(ranks):
         print(f"  {page}: {ranks[page]:.4f}")
-    '''
+    print(np.sum(list(ranks.values())))
 
-    print(sample_pagerank(corpus, DAMPING, SAMPLES))
 
 def crawl(directory):
     """
@@ -137,20 +136,51 @@ def iterate_pagerank(corpus, damping_factor):
     PageRank values should sum to 1.
     """
 
+    # dictionary for the ranks
     rank = dict()
-    # setting the ranks to even probabilities
-    for page in corpus:
-        rank[page] = 1 / len(corpus)
-    # setting variable to track the change in rank, arbitrarily setting a value
-    change = 100
+    # copy of corpus to use instead of the original, to not change the original
+    corpus_ = corpus.copy()
+
+    # setting the ranks to even probabilities for each page in the corpus
+    for page in corpus_:
+        rank[page] = 1 / len(corpus_)
+        # if the page doesn't link to any others, have it link to every page
+        if len(corpus_[page]) == 0:
+            corpus_[page] = set(corpus_.keys())
+    
+    # setting variable to track the change in rank, arbitrarily setting to infinity
+    change = np.inf
+
+    # while the change is greater than 0.001 (threshold to stop)
     while change > 0.001:
-        for page in corpus:
-            if len(page) == 0:
-                probabilities = [1/len(corpus) for _ in range(len(corpus))]
-            else:
-                pages_linked = [i for i in len(corpus) if page in corpus[i]]
-                probabilities = (1-damping_factor)/len(corpus)
-                probabilities += damping_factor*np.sum([rank[i]/len(corpus[i]) for i in pages_linked])
+
+        # dictionary to keep track of the change in rank of each page
+        change_ = dict()
+
+        # loop through pages
+        for page in corpus_:
+
+            # list of the pages that link to the currently indexed page
+            pages_linked = [i for i in corpus_ if page in corpus_[i]]
+
+            # the first part of the equation: (1-d)/N
+            new_rank = (1-damping_factor)/len(corpus_)
+
+            # adding the sum of the ranks of the pages that link to the current page, divided by the #
+            # of links that page has, all times the damping factor
+            new_rank += damping_factor*np.sum([rank[i]/len(corpus_[i]) for i in pages_linked])
+            
+            # calculate change in the current rank for the page and the new rank
+            change_[page] = np.abs(rank[page] - new_rank)
+            # set the rank of the page to the new rank
+            rank[page] = new_rank
+    
+        # set the change variable to the max change
+        change = max(list(change_.values()))
+
+    return rank
+
+        
 
 
 if __name__ == "__main__":
