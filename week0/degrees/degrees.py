@@ -1,7 +1,7 @@
 import csv
 import sys
 
-from util import Node, QueueFrontier
+from util import Node, StackFrontier, QueueFrontier
 
 # Maps names to a set of corresponding person_ids
 names = {}
@@ -92,46 +92,63 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # initialize starting node and frontier: state is the person_id, action is the movie_id
-    start = Node(state=source, parent=None, action=None)
+    # explored set
+    explored = set()
+
+    # frontier and starting position
+    start = Node(source, None, None)
     frontier = QueueFrontier()
     frontier.add(start)
 
-    # explored set of actors
-    explored = set()
-
-
-    # Keep looping until solution found
+    # loop until solution found
     while True:
 
-        # if nothing in frontier, no solution
+        # if nothing left in frontier then their is no solution, return None
         if frontier.empty():
             return None
-
-        # choose node from frontier
+        
+        # explore a node from frontier
         node = frontier.remove()
 
-        # If node is the target, we have solution
+        # if node is goal, then we have solution
         if node.state == target:
-                path = []
-                while node.parent is not None:
-                    path.append((node.action, node.state))
-                    node = node.parent
-                path.reverse()
-                return path
+
+            # list for the path
+            path = []
+
+            # loop through all the parent nodes
+            while node.parent is not None:
+
+                # add the action and state of the node to the path list
+                path.append((node.action, node.state))
+
+                # set the node to the parent node --- to go backwards in the tree
+                node = node.parent
+
+            # reverse the path to get in linear order, and return it
+            path.reverse()
+            return path
         
-        # add actor to explored set
-        explored.add(node.state)
+        # add node to explored
+        explored.add(node)
 
-        # add neighbors to frontier: actions are the movie_id, states are the person_id
-        for movie, person in neighbors_for_person(node.state):
-            # if the person is not in the frontier and has not been explored, add node to frontier
+        # add neighbors to frontier
+        for movie, person in neighbors_for_person(node.state):   
+
+            # if the person is not in the frontier and has not been explored         
             if not frontier.contains_state(person) and person not in explored:
-                child = Node(state=person, parent=node, action=movie)
-                frontier.add(child)
+
+                # if person is the target, found solution --- uses same method to return the solution defined earlier
+                if person == target:
+                    path = [(movie, person)]
+                    while node.parent is not None:
+                        path.append((node.action, node.state))
+                        node = node.parent
+                    path.reverse()
+                    return path
                 
-
-
+                # add the unexplored person to the frontier
+                frontier.add(Node(state=person, parent=node, action=movie))
 
 def person_id_for_name(name):
     """
