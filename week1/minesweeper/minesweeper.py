@@ -226,49 +226,45 @@ class MinesweeperAI():
         if new_sentence not in self.knowledge:
             self.knowledge.append(new_sentence)
                 
+        # keep looping until no more inferences can be made
+        new_knowledge = True
+        while(new_knowledge):
+            new_knowledge = False
+            # deep copy of sentences, to allow looping through it and changing it's elements
+            knowledge_ = deepcopy(self.knowledge)
 
-        # deep copy of sentences, to allow looping through it and changing it's elements
-        knowledge_ = deepcopy(self.knowledge)
+            # loop through the sentences in knowledge base and add any new safe or mine cells to knowledge base
+            for sentence in knowledge_:
 
-        # loop through the sentences in knowledge base and add any new safe or mine cells to knowledge base
-        for sentence in knowledge_:
+                for safe in sentence.known_safes():
+                    if safe not in self.safes:
+                        self.mark_safe(safe)
+                        new_knowledge = True
 
-            for safe in sentence.known_safes():
-                if safe not in self.safes:
-                    self.mark_safe(safe)
+                for mine in sentence.known_mines():
+                    if mine not in self.mines:
+                        self.mark_mine(mine)
+                        new_knowledge = True
 
-            for mine in sentence.known_mines():
-                if mine not in self.mines:
-                    self.mark_mine(mine)
+            # updated copy of the knowledge base
+            knowledge_ = deepcopy(self.knowledge)
 
-        # updated copy of the knowledge base
-        knowledge_ = deepcopy(self.knowledge)
-
-        # inferring new sentences using subset formula: set2 - set1 = count2 - count 1
-        for s1 in knowledge_:
-            for s2 in knowledge_:
-                # if on the same sentence, continue
-                if s1.cells is s2.cells:
-                    continue
-                # if s1 is a subset of s2, we can infer a new sentence: set2 - set1 = count2 - count1    
-                if s1.cells.issubset(s2.cells):
-                    new_cells = s2.cells - s1.cells
-                    new_count = s2.count - s1.count
-                    if len(new_cells) > 0 and new_count > 0:
-                        new_sentence = Sentence(s2.cells - s1.cells, s2.count - s1.count)
-                        if new_sentence not in self.knowledge:
-                            self.knowledge.append(new_sentence)
-        
-        # updated copy of knowledge base
-        knowledge_ = deepcopy(self.knowledge)
-        # loop through the sentences in knowledge base and add any new safe or mine cells to knowledge base
-        for sentence in knowledge_:
-            for safe in sentence.known_safes():
-                if safe not in self.safes:
-                    self.mark_safe(safe)
-            for mine in sentence.known_mines():
-                if mine not in self.mines:
-                    self.mark_mine(mine)
+            # inferring new sentences using subset formula: set2 - set1 = count2 - count 1
+            for s1 in knowledge_:
+                for s2 in knowledge_:
+                    # if on the same sentence, continue
+                    if s1.cells is s2.cells:
+                        continue
+                    # if s1 is a subset of s2, we can infer a new sentence: set2 - set1 = count2 - count1    
+                    if s1.cells.issubset(s2.cells):
+                        new_cells = s2.cells - s1.cells
+                        new_count = s2.count - s1.count
+                        if len(new_cells) > 0 and new_count >= 0:
+                            new_sentence = Sentence(s2.cells - s1.cells, s2.count - s1.count)
+                            if new_sentence not in self.knowledge:
+                                self.knowledge.append(new_sentence)
+                                new_knowledge = True
+            
 
 
     def make_safe_move(self):
