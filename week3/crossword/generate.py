@@ -352,18 +352,34 @@ class CrosswordCreator():
         # loop through the possible values for this variable
         for value in self.domains[var]:
 
-            # create a copy of assignment and see if the assignment will work
+            # create a copy of assignment to see if the assignment will work, and a copy to reset assignment if needed
+            assignment_original = deepcopy(assignment)
             assignment_ = deepcopy(assignment)
+
+            # set var to value in copy 
             assignment_[var] = value
 
+            # if the value is consistent with the other assignments
             if self.consistent(assignment_):
                 
+                # set assignment to the new assignment
+                assignment = assignment_
+
+                # maintain arc consistency by calling ac3 with the arcs being the neighbors of var with var
+                if not self.ac3(arcs=[(y, var) for y in self.crossword.neighbors(var)]):
+                    
+                    # if maintaining arc consistency doesn't work, reset assignment
+                    assignment = assignment_
+
                 # recursively call backtrack with this new assignment
                 result = self.backtrack(assignment_)
 
                 # if the value works, return result
                 if result != None:
                     return result
+            
+            # if the assignment doesn't return a result, reset it to the original
+            assignment = assignment_original
 
         return None                
                 
