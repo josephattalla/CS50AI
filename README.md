@@ -16,7 +16,7 @@ My implementations of [Harvard CS50’s Introduction to Artificial Intelligence 
 
 [Nim Reinforcement Learning Algorithm](week4/nim/)
 
-- Implemented a reinforcement learning algorithm utiliing Q-learning.
+- Implemented a reinforcement learning algorithm utilizing Q-learning.
 
 - [rubric](https://cs50.harvard.edu/ai/2024/projects/4/nim/)
 
