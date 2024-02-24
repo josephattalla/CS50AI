@@ -1,4 +1,4 @@
-My implementations of Harvard's [CS50’s Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/2024/) projects. Each project was fully implemented by myself, given the distribution code by CS50. See each project's rubric here: https://cs50.harvard.edu/ai/2024/. 
+My implementations of [Harvard CS50’s Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/2024/) projects. Each project was fully implemented by myself, given the distribution code by CS50. See each project's rubric here: https://cs50.harvard.edu/ai/2024/. 
 
 ### My Favorite Projects:
 
