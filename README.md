@@ -1,6 +1,6 @@
 # CS50 AI Solutions
 
-This repository contains my solutions to the exercises from the [CS50's Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/) course offered by Harvard University.
+This repository contains my solutions to the exercises from the [CS50's Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/) course offered by Harvard University. Each folder corresponds to a specific exercise, with detailed descriptions and implementations.
 
 ## Table of Contents
 
@@ -18,12 +18,16 @@ This repository contains my solutions to the exercises from the [CS50's Introduc
 - [Lecture 4: Learning](#lecture-4-learning)
   - [Shopping](#shopping)
   - [Nim](#nim)
+- [Lecture 5: Neural Networks](#lecture-5-neural-networks)
+  - [Traffic](#traffic)
+- [Lecture 6: Language](#lecture-6-language)
+  - [Parser](#parser)
 
 ## Lecture 0: Search
 
 ### [Degrees](week0/degrees)
 
-**Description**: This exercise involves implementing a program to determine the degree of separation between two actors using a shortest path algorithm. The method used is Breadth-First Search (BFS) to explore the shortest path in an unweighted graph where nodes represent actors and edges represent movies in which they have appeared together.
+**Description**: This exercise involves implementing a program to determine the degree of separation between two actors using a shortest path algorithm. The method used is Breadth-First Search (BFS) to explore the shortest path in a graph where nodes represent actors and edges represent movies in which they have appeared together.
 
 ### [Tic-Tac-Toe](week0/tictactoe)
 
@@ -33,7 +37,7 @@ This repository contains my solutions to the exercises from the [CS50's Introduc
 
 ### [Knights](week1/knights)
 
-**Description**: This exercise involves implementing a knowledge base to solve the classic "Knights and Knaves" logic puzzles. The method involves constructing logical statements using propositional logic and employing a resolution algorithm to deduce the correct answers.
+**Description**: This exercise involves implementing a knowledge base to solve the classic "Knights and Knaves" logic puzzles. The method involves constructing logical statements using propositional logic and employing a resolution algorithm to find the correct answers.
 
 ### [Minesweeper](week1/minesweeper)
 
@@ -64,3 +68,15 @@ This repository contains my solutions to the exercises from the [CS50's Introduc
 ### [Nim](week4/nim)
 
 **Description**: Implement an AI to play the game of Nim optimally using reinforcement learning. The AI learns the optimal strategy for playing Nim by interacting with the environment, updating its knowledge base, and using Q-learning to maximize its rewards.
+
+## Lecture 5: Neural Networks
+
+### [Traffic](week5/traffic)
+
+**Description**: Build a neural network to analyze traffic patterns from overhead images. The solution involves designing and training a convolutional neural network (CNN) using TensorFlow/Keras to classify the state of traffic in various images.
+
+## Lecture 6: Language
+
+### [Parser](week6/parser)
+
+**Description**: Implement a context-free grammar parser for parsing and interpreting sentences.
